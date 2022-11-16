@@ -72,11 +72,25 @@ public class DBHandler extends SQLiteOpenHelper {
         ArrayList<TripItem> tripItemsArrayList = new ArrayList<>();
         if(cursorTrips.moveToFirst()) {
             do {
-                tripItemsArrayList.add(new TripItem("", ""));
+                tripItemsArrayList.add(new TripItem
+                                                (cursorTrips.getString(0),
+                                                cursorTrips.getString(1),
+                                                cursorTrips.getString(2),
+                                                cursorTrips.getString(3),
+                                                cursorTrips.getString(4),
+                                                cursorTrips.getString(5),
+                                                cursorTrips.getString(6),
+                                                cursorTrips.getString(7))
+                );
             } while (cursorTrips.moveToNext());
         }
 
         return tripItemsArrayList;
+    }
+
+    public void deleteAllTrips() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM TRIP");
     }
 
 

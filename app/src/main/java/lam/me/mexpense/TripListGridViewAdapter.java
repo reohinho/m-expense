@@ -27,11 +27,16 @@ public class TripListGridViewAdapter extends ArrayAdapter {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         v = inflater.inflate(R.layout.trip_list_grid_view_items, null);
+        TextView tripSeq = v.findViewById(R.id.tripSeq);
         TextView tripName = v.findViewById(R.id.tripName);
         TextView destination = v.findViewById(R.id.destination);
+        TextView tripDate = v.findViewById(R.id.tripDate);
+
         TripItem item = (TripItem) tripItemList.get(position);
+        tripSeq.setText(item.getId());
         tripName.setText(item.getTripName());
         destination.setText(item.getDestination());
+        tripDate.setText(item.getTripDate());
 
         return v;
     }

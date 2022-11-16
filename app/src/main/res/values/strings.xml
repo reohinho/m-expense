@@ -4,7 +4,7 @@
     <string name="add_new_trip">Add New Trip</string>
     <string name="trip_name">Trip Name</string>
     <string name="destination">Destination</string>
-    <string name="descrption">Description</string>
+    <string name="description">Description</string>
     <string name="trip_desc">Description</string>
     <string name="trip_date">Trip Date</string>
     <string name="duration">Duration</string>
@@ -14,4 +14,5 @@
     <string name="require_risk_assessment">Require Risk Assessment</string>
     <string name="is_stay_behind">Is Stay Behind</string>
     <string name="button_confirm">Confirm</string>
+    <string name="delete_all_trip">Delete all Trips</string>
 </resources>

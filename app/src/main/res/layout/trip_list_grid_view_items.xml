@@ -3,17 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <TextView
+        android:id="@+id/tripSeq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".05"
+        />
     <TextView
         android:id="@+id/tripName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight=".50"
+        android:layout_weight=".35"
         />
     <TextView
         android:id="@+id/destination"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight=".50"
+        android:layout_weight=".30"
+        />
+    <TextView
+        android:id="@+id/tripDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".30"
         />
 </LinearLayout>

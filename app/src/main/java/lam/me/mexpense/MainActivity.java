@@ -16,17 +16,19 @@ public class MainActivity extends AppCompatActivity {
     ArrayList tripItemList = new ArrayList<>();
 
     Button newTripButton;
+    Button deleteAllButton;
 
+    DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tripListGridView = (GridView) findViewById(R.id.tripListGridView);
-        tripItemList.add(new TripItem("Google IO 2022","21st May 22"));
-        tripItemList.add(new TripItem("TGS 2021","21st Sept 21"));
+        dbHandler = new DBHandler(getApplicationContext());
+        tripItemList = dbHandler.getAllTrips();
 
+        tripListGridView = (GridView) findViewById(R.id.tripListGridView);
 
         TripListGridViewAdapter gridViewAdapter = new TripListGridViewAdapter(this, R.layout.trip_list_grid_view_items, tripItemList);
         tripListGridView.setAdapter(gridViewAdapter);
@@ -37,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), NewTrip.class);
+                startActivity(i);
+            }
+
+        });
+
+        deleteAllButton = findViewById(R.id.deleteAllButton);
+        deleteAllButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                dbHandler.deleteAllTrips();
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
 

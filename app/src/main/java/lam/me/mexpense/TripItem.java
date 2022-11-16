@@ -3,20 +3,16 @@ package lam.me.mexpense;
 import java.util.Date;
 
 public class TripItem {
-    int id;
+    String id;
     String tripName;
     String destination;
-    Date tripDate;
-    Boolean requireRiskAssessment;
+    String tripDate;
+    String requireRiskAssessment;
     String description;
-    Double duration;
-    Boolean isStayBehind;
+    String duration;
+    String isStayBehind;
 
-    public TripItem(String tripName, String destination) {
-        this.tripName = tripName;
-        this.destination = destination;
-    }
-    public TripItem(int id, String tripName, String destination, Date tripDate, Boolean requireRiskAssessment, String description, Double duration, Boolean isStayBehind) {
+    public TripItem(String id, String tripName, String tripDate, String destination,  String requireRiskAssessment, String description, String duration, String isStayBehind) {
         this.id = id;
         this.tripName = tripName;
         this.destination = destination;
@@ -27,11 +23,11 @@ public class TripItem {
         this.isStayBehind = isStayBehind;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,19 +47,19 @@ public class TripItem {
         this.destination = destination;
     }
 
-    public Date getTripDate() {
+    public String getTripDate() {
         return tripDate;
     }
 
-    public void setTripDate(Date tripDate) {
+    public void setTripDate(String tripDate) {
         this.tripDate = tripDate;
     }
 
-    public Boolean getRequireRiskAssessment() {
+    public String getRequireRiskAssessment() {
         return requireRiskAssessment;
     }
 
-    public void setRequireRiskAssessment(Boolean requireRiskAssessment) {
+    public void setRequireRiskAssessment(String requireRiskAssessment) {
         this.requireRiskAssessment = requireRiskAssessment;
     }
 
@@ -75,19 +71,19 @@ public class TripItem {
         this.description = description;
     }
 
-    public Double getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(Double duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
-    public Boolean getStayBehind() {
+    public String getIsStayBehind() {
         return isStayBehind;
     }
 
-    public void setStayBehind(Boolean stayBehind) {
-        isStayBehind = stayBehind;
+    public void setIsStayBehind(String isStayBehind) {
+        this.isStayBehind = isStayBehind;
     }
 }
