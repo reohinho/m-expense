@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_new_trip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/add_new_trip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/add_new_trip" />
+
+    <EditText
+        android:id="@+id/input_trip_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/trip_name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/destination" />
+
+    <EditText
+        android:id="@+id/trip_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/trip_date"
+        android:inputType="date|textPersonName" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/require_risk_assessment"
+        />
+    <Spinner
+        android:id="@+id/require_risk_assessment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/descrption"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/trip_desc"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/duration"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/is_stay_behind"
+        />
+    <Spinner
+        android:id="@+id/is_stay_behind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/is_stay_behind"
+        />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_cancel" />
+
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MExpense</string>
+    <string name="main_buttons_add">Add</string>
+    <string name="add_new_trip">Add New Trip</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="destination">Destination</string>
+    <string name="descrption">Description</string>
+    <string name="trip_desc">Description</string>
+    <string name="trip_date">Trip Date</string>
+    <string name="duration">Duration</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="confirm_new_trip">Confirm New Trip</string>
+    <string name="require_risk_assessment">Require Risk Assessment</string>
+    <string name="is_stay_behind">Is Stay Behind</string>
+    <string name="button_confirm">Confirm</string>
+</resources>
